@@ -40,4 +40,12 @@ object Main extends App {
   println(
     ChiselStage.emitCHIRRTL(new FIRFilter(8, Seq(0.U, 1.U, 2.U, 1.U, 0.U)))
   )
+
+  printHeader("System Verilog:")
+  println(
+    ChiselStage.emitSystemVerilog(
+      new ExtAdder8Wrapper,
+      firtoolOpts = Array("-disable-all-randomization", "-strip-debug-info")
+    )
+  )
 }
