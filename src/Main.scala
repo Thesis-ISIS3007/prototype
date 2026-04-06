@@ -48,4 +48,12 @@ object Main extends App {
       firtoolOpts = Array("-disable-all-randomization", "-strip-debug-info")
     )
   )
+
+  printHeader("HardFloat AddRecFN Example (System Verilog):")
+  println(
+    ChiselStage.emitSystemVerilog(
+      new HF32Add,
+      firtoolOpts = Array("-disable-all-randomization", "-strip-debug-info")
+    )
+  )
 }
