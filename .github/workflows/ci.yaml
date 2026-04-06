@@ -42,7 +42,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Check formatting (scalafmt)
-        run: ${{ env.DOCKER_RUN }} ./mill mill.scalalib.scalafmt/checkFormatAll
+        run: ${{ env.DOCKER_RUN }} ./mill mill.scalalib.scalafmt/checkFormat
 
       - name: Lint (scalafix)
-        run: ${{ env.DOCKER_RUN }} ./mill fix --check
+        run: ${{ env.DOCKER_RUN }} ./mill fix --check src

@@ -11,9 +11,8 @@ extends:
 scalaVersion: 2.13.18
 jvmVersion: temurin:25
 
-sources:
-  - src
-  - hardfloat/hardfloat/src/main/scala
+moduleDeps:
+  - external
 
 compileMvnDeps: [com.lihaoyi:::acyclic:0.3.20]
 

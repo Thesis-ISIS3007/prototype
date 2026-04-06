@@ -1,0 +1,13 @@
+extends:
+  - ScalaModule
+
+scalaVersion: 2.13.18
+jvmVersion: temurin:25
+
+sources:
+  - hardfloat/hardfloat/src/main/scala
+
+mvnDeps:
+  - org.chipsalliance::chisel:7.10.0
+scalacPluginMvnDeps:
+  - org.chipsalliance:::chisel-plugin:7.10.0

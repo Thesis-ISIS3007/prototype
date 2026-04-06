@@ -1,8 +1,8 @@
 package prototype
 
-import chisel3._
-
 import hardfloat._
+
+import chisel3._
 
 class HF32Add extends Module {
   val io = IO(new Bundle {
