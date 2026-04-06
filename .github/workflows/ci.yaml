@@ -46,3 +46,6 @@ jobs:
 
       - name: Lint (scalafix)
         run: ${{ env.DOCKER_RUN }} ./mill fix --check src
+
+      - name: Run tests
+        run: ${{ env.DOCKER_RUN }} ./mill test
